@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You 💗</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd6e7, #e8d7ff);
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            width: 80%;
+            max-width: 400px;
+            padding: 35px 25px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+       h1 {
+    color: #ff4f91;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.3;
+}
+h2 {
+    color: #ff4f91;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+        p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+        button {
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            background: #ff6fa8;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+#evidence img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin: 15px auto;
+}
+#couplePhoto {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin: 15px auto;
+}
+#myFlower {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+       #message {
+    display: none;
+    margin-top: 25px;
+    color: #ff4f91;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#evidence {
+    display: none;
+}
+
+.sparkles {
+    font-size: 28px;
+    margin-bottom: 10px;
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        width: 88%;
+        padding: 30px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px 22px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>🚨 IMPORTANT MESSAGE 🚨</h1>
+
+        <p>This website was made specifically for you. 💗</p>
+
+        <button onclick="openMessage()">Open Message 💗</button>
+
+        <div id="message" style="display: none;">
+    <div class="sparkles">✨ 💗 ✨</div>
+
+    <h2>You found it, babeee! 🥹💗</h2>
+
+    <p>
+        But this is only the beginning...
+    </p>
+
+    <p>
+        I have some evidence to show you. 👀
+    </p>
+</div>
+<div id="evidence" style="display: none;">
+
+    <div class="evidence-label">📁 CASE FILE #001</div>
+
+    <h2>Subject: Extremely Cute</h2>
+
+    <button onclick="revealPhoto()">Reveal Evidence 👀</button>
+
+<img id="herPhoto" src="her-photo.jpg" alt="Evidence #001" style="display: none;">
+
+    <p>
+        Evidence collected after the subject was caught
+        being ridiculously cute.
+    </p>
+
+    <p class="verdict">
+    VERDICT: GUILTY. 💗
+</p>
+<button onclick="openEvidence2()">Next Case File 💗</button>
+</div>
+
+<div id="evidence2" style="display: none;">
+
+    <div class="evidence-label">📁 CASE FILE #002</div>
+
+    <h2>Subject: Us 💗</h2>
+
+    <p>
+        Further evidence has been discovered...
+    </p>
+
+    <button onclick="revealCouplePhoto()">Reveal Evidence 👀</button>
+
+    <img id="couplePhoto" src="couple-photo.jpg" alt="Evidence #002" style="display: none;">
+
+    <p>
+        Evidence proving that we look pretty cuteeee together. 🥹💗
+    </p>
+
+    <p class="verdict">
+        VERDICT: TOO CUTE. 💗
+    </p>
+<button onclick="openFlowerPage()">Next 💗</button>
+</div>
+<div id="flowerPage" style="display: none;">
+
+    <h2>🌷 Something I Made For You</h2>
+
+    <img id="myFlower" src="my-flower.jpg" alt="A flower I drew for you">
+
+    <p>
+        I wanted to make something just for you. 💗
+    </p>
+
+    <button onclick="openMessagePage()">Keep going 💗</button>
+
+</div>
+<div id="messagePage" style="display: none;">
+
+    <h2>💗 A Little Message For You</h2>
+
+    <p>
+        I made all of this because I wanted to give you
+        something that was made specifically for you, babeee. 💗
+    </p>
+
+    <p>
+        Something that came from me, something you could keep,
+        and something that I could make with my own hands
+        and my own little ideas just for you. 🥹💗
+    </p>
+
+    <p>
+        It might not be perfect, but every little part of it
+        was made with you in mind. And honestly, that's what
+        makes it special to me. 💗
+    </p>
+
+    <button id="clickMeButton" onclick="showMoreLove()">Click meee 💗</button>
+
+    <div id="moreLove" style="display: none;">
+
+        <p>
+            .......
+        </p>
+
+        <p>
+            Actually, there's moree. 🥹💗
+        </p>
+
+        <button onclick="showFinalLetter()">One more thing 💌</button>
+
+    </div>
+</div>
+    <div id="finalLetter" style="display: none;">
+
+        <h2>💌 For You, Babeee</h2>
+
+        <p>
+            If you made it this far... then you found the little
+            piece of my heart I made just for you. 🥹💗
+        </p>
+
+        <p>
+            I made all of this because I wanted to give you something
+            that came from me, made with my own hands, my own ideas,
+            and so much love for you. 🌷💗
+        </p>
+
+        <p>
+            You are so incredibly special to me, babeee.
+            I hope you always remember how loved, appreciated,
+            and precious you are to me. 🥹
+        </p>
+
+        <p>
+            No matter how simple this little website may be,
+            every part of it was made while thinking about you. 💗
+        </p>
+
+        <p>
+            I love you so, so much, babeee. 💗
+        </p>
+
+        <p>
+            — Daniel 💌
+        </p>
+
+        <p>
+            Made with love<br>
+            October 8, 2026
+        </p>
+
+    </div>
+
+</div>
+
+
+    <script>
+       function openMessage() {
+    document.querySelector("h1").style.display = "none";
+    document.querySelector("body > .card > p").style.display = "none";
+    document.querySelector("body > .card > button").style.display = "none";
+
+    document.getElementById("message").style.display = "block";
+    document.getElementById("evidence").style.display = "block";
+}
+function revealPhoto() {
+    document.getElementById("herPhoto").style.display = "block";
+}
+function revealCouplePhoto() {
+    document.getElementById("couplePhoto").style.display = "block";
+}
+function openEvidence2() {
+    document.getElementById("message").style.display = "none";
+    document.getElementById("evidence").style.display = "none";
+    document.getElementById("evidence2").style.display = "block";
+}
+
+function openFlowerPage() {
+    document.getElementById("evidence2").style.display = "none";
+    document.getElementById("flowerPage").style.display = "block";
+}
+
+function openMessagePage() {
+    document.getElementById("flowerPage").style.display = "none";
+    document.getElementById("messagePage").style.display = "block";
+}
+function showMoreLove() {
+    document.getElementById("clickMeButton").style.display = "none";
+    document.getElementById("moreLove").style.display = "block";
+}
+function showFinalLetter() {
+    document.getElementById("messagePage").style.display = "none";
+    document.getElementById("finalLetter").style.display = "block";
+}
+</script>
+
+</body>
+</html>
